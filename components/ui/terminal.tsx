@@ -275,7 +275,7 @@ export const Terminal = ({
     <div
       ref={containerRef}
       className={cn(
-        "border-border bg-background z-0 h-full max-h-180 w-full rounded-xl border",
+        "border-border bg-background z-0 h-full max-h-105 w-full rounded-xl border",
         className,
       )}
     >

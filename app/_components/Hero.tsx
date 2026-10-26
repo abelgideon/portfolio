@@ -67,7 +67,7 @@ function MyTerminal() {
 
 export default function HeroPage() {
   return (
-    <div className="md:flex pt-10 md:pt-67 md:max-w-[80%] md:mx-auto md:gap-40">
+    <div className="md:flex pt-10 md:pt-67 md:max-w-[80%] md:mx-auto md:gap-40 md:h-screen">
       <div className="hidden md:block">
         <h1 className="uppercase text-7xl font-bold">Building</h1>
         <h1 className="uppercase text-7xl font-bold">Full-Stack</h1>
