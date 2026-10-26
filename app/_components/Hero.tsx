@@ -4,6 +4,7 @@ import {
   Terminal,
   TypingAnimation,
 } from "@/components/ui/terminal";
+import { ArrowUpRight } from "lucide-react";
 
 function MyTerminal() {
   return (
@@ -76,9 +77,10 @@ export default function HeroPage() {
           and Go. Focused on clean code, thoughtful user experiences, and
           turning ideas into working products.
         </p>
-        <Button className="uppercase">view my projects</Button>
+        <Button className="uppercase cursor-pointer">
+          view my projects <ArrowUpRight className="ml-1 size-4" />
+        </Button>
       </div>
-
       <MyTerminal />
     </div>
   );
