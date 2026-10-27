@@ -11,7 +11,7 @@ import { MenuIcon } from "lucide-react";
 
 export function Navbar() {
   return (
-    <nav className="flex justify-between text-center gap-3 uppercase items-center">
+    <nav className="flex justify-between text-center gap-3 uppercase items-center sticky top-0 z-50 pt-8">
       <div>
         <p className="text-xl">Abel Gideon</p>
       </div>

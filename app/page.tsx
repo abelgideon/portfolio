@@ -4,7 +4,7 @@ import ProjectsPage from "./_components/Projects";
 
 export default function Home() {
   return (
-    <div className="p-4 md:p-10">
+    <div className="pb-4 pl-4 pr-4 md:pb-10 md:pl-10 md:pr-10">
       <Navbar />
       <HeroPage />
       <ProjectsPage />
