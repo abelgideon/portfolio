@@ -374,8 +374,7 @@ function Certificate({ title, link }: { title: string; link: string }) {
         <p className="md:text-xl">{title}</p>
         <ArrowUpRight
           className="size-6 opacity-0
-                     group-hover:opacity-100 group-hover:translate-x-0
-                     transition-all duration-300 ease-out"
+                     group-hover:opacity-100"
         />
       </div>
     </a>
