@@ -1,3 +1,4 @@
+import CertificatesPage from "./_components/Certificates";
 import HeroPage from "./_components/Hero";
 import { Navbar } from "./_components/Navbar";
 import ProjectsPage from "./_components/Projects";
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <HeroPage />
       <ProjectsPage />
+      <CertificatesPage />
     </div>
   );
 }
