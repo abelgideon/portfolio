@@ -6,8 +6,9 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useIsMobile } from "@/hooks/user-mobile";
-import { ArrowRight, XIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, XIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -338,8 +339,45 @@ function Source({ certificate }: { certificate: CertificateSource }) {
               }
             />
           </div>
+          <div className="flex justify-center items-center gap-6 mt-1 md:mt-10 mb-6 md:mb-10">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-white p-2">
+              <Image
+                src={certificate.logo}
+                alt={`${certificate.source} logo`}
+                width={64}
+                height={64}
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h1 className="text-xl md:text-3xl">{certificate.source}</h1>
+              <p className="hidden md:block text-[16px] text-muted-foreground md:max-w-100">
+                {certificate.shortDescription}
+              </p>
+            </div>
+          </div>
+          <ScrollArea className="h-[calc(100vh-250px)] w-full">
+            {certificate.certificates.map((cert) => (
+              <Certificate key={cert.id} title={cert.title} link={cert.link} />
+            ))}
+          </ScrollArea>
         </div>
       </DrawerContent>
     </Drawer>
+  );
+}
+
+function Certificate({ title, link }: { title: string; link: string }) {
+  return (
+    <a target="_blank" href={link}>
+      <div className="flex items-center justify-between border-b hover:bg-[#161616] p-5 cursor-pointer group">
+        <p className="md:text-xl">{title}</p>
+        <ArrowUpRight
+          className="size-6 opacity-0
+                     group-hover:opacity-100 group-hover:translate-x-0
+                     transition-all duration-300 ease-out"
+        />
+      </div>
+    </a>
   );
 }
