@@ -15,6 +15,7 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa6";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const projects = [
   {
@@ -99,17 +100,19 @@ export default function ProjectsPage() {
       <p className="text-muted-foreground mt-2 mb-5 md:mb-10">
         A selection of things I&apos;ve built.
       </p>
-      {projects.map((project) => (
-        <ProjectCard
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          gitLink={project.gitLink}
-          liveLink={project.liveLink}
-          techStack={project.techStack}
-        />
-      ))}
+      <ScrollArea className="h-[calc(100vh-250px)] w-full">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            gitLink={project.gitLink}
+            liveLink={project.liveLink}
+            techStack={project.techStack}
+          />
+        ))}
+      </ScrollArea>
     </div>
   );
 }
