@@ -93,15 +93,53 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abel Gideon",
+  url: "https://abelgideon.vercel.app",
+  image: "https://abelgideon.vercel.app/A.png",
+  jobTitle: "Full-Stack Engineer",
+  description:
+    "Full-Stack Engineer specializing in React, Next.js, TypeScript, Node.js, and Go.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Addis Ababa",
+    addressCountry: "ET",
+  },
+  sameAs: [
+    "https://github.com/abelgideon",
+    "https://www.linkedin.com/in/abelgideon",
+  ],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Go",
+    "Full-Stack Development",
+    "Web Development",
+  ],
+};
+
 export default function Home() {
   return (
-    <div className="pb-4 pl-4 pr-4 md:pb-10 md:pl-10 md:pr-10">
-      <Navbar />
-      <HeroPage />
-      <ProjectsPage />
-      <CertificatesPage />
-      <SkillsPage />
-      <ContactPage />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <div className="pb-4 pl-4 pr-4 md:pb-10 md:pl-10 md:pr-10">
+        <Navbar />
+        <HeroPage />
+        <ProjectsPage />
+        <CertificatesPage />
+        <SkillsPage />
+        <ContactPage />
+      </div>
+    </>
   );
 }
