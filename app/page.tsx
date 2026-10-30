@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: "Abel Gideon Portfolio",
     images: [
       {
-        url: "/A.png",
+        url: "/seo-banner.png",
         width: 1200,
         height: 630,
         alt: "Abel Gideon - Full-Stack Engineer Portfolio",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "I'm Abel Gideon, a Full-Stack Engineer specializing in React, Next.js, TypeScript, Node.js, and Go. Explore my projects and work.",
     creator: "@abelgideontk7",
-    images: ["/A.png"],
+    images: ["/seo-banner.png"],
   },
 
   robots: {
