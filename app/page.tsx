@@ -91,6 +91,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: "Ii6NfEcr3w7rezu5UByzwJ9-5-WqPuhPfG7sEe1M0x8",
+  },
 };
 
 const jsonLd = {
