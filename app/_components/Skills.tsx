@@ -1,4 +1,4 @@
-import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
+import { EvervaultCard } from "@/components/ui/evervault-card";
 
 const skills = [
   "Next.js",
@@ -31,7 +31,7 @@ export default function SkillsPage() {
 
 export function MyEvervaultCard({ skill }: { skill: string }) {
   return (
-    <div className="flex flex-col items-start border relative h-[10rem] md:h-[20rem]">
+    <div className="flex flex-col items-start border relative h-40 md:h-80">
       <EvervaultCard text={skill} />
     </div>
   );

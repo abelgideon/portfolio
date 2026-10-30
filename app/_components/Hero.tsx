@@ -60,6 +60,9 @@ function MyTerminal() {
         >
           Email
         </a>
+        <a className="underline" target="_blank" href="https://t.me/Abel007">
+          Telegram
+        </a>
       </AnimatedSpan>
     </Terminal>
   );

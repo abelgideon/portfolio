@@ -1,4 +1,5 @@
 import CertificatesPage from "./_components/Certificates";
+import ContactPage from "./_components/Contact";
 import HeroPage from "./_components/Hero";
 import { Navbar } from "./_components/Navbar";
 import ProjectsPage from "./_components/Projects";
@@ -12,6 +13,7 @@ export default function Home() {
       <ProjectsPage />
       <CertificatesPage />
       <SkillsPage />
+      <ContactPage />
     </div>
   );
 }

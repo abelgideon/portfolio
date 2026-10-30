@@ -33,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         geistMono.variable,
         "font-sans",
         inter.variable,
+        "scroll-smooth",
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
