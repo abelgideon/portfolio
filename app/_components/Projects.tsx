@@ -100,19 +100,18 @@ export default function ProjectsPage() {
       <p className="text-muted-foreground mt-2 mb-5 md:mb-10">
         A selection of things I&apos;ve built.
       </p>
-      <ScrollArea className="h-[calc(100vh-250px)] w-full">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            gitLink={project.gitLink}
-            liveLink={project.liveLink}
-            techStack={project.techStack}
-          />
-        ))}
-      </ScrollArea>
+
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+          gitLink={project.gitLink}
+          liveLink={project.liveLink}
+          techStack={project.techStack}
+        />
+      ))}
     </div>
   );
 }
@@ -157,67 +156,70 @@ function ProjectCard({
       >
         {" "}
       </DrawerTrigger>
-      <DrawerContent className="z-51">
-        <div className="p-4 md:p-8">
-          <div className="flex justify-end">
-            <DrawerClose
-              nativeButton={false}
-              render={
-                <XIcon className="text-muted-foreground cursor-pointer md:mt-2 md:mr-2" />
-              }
-            />
-          </div>
-          <h1 className="text-xl md:text-4xl font-bold mt-1 md:mt-10">
-            {title}
-          </h1>
-          <div className="relative mt-8 aspect-video w-full rounded-sm overflow-hidden">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          <div className="flex gap-5 mt-4">
-            <a
-              target="_blank"
-              href={liveLink}
-              className={cn(buttonVariants(), "flex-1")}
-            >
-              <ArrowUpRightFromSquare className="mr-1" />
-              Live Demo
-            </a>
-            <a
-              target="_blank"
-              href={gitLink}
-              className={cn(buttonVariants({ variant: "outline" }), "flex-1")}
-            >
-              <FaGithub className="mr-1" />
-              Source Code
-            </a>
-          </div>
 
-          <p className="text-lg font-bold border-b uppercase pb-2 mt-6">
-            project details
-          </p>
-          <p className="text-[16px] text-muted-foreground mt-2 leading-relaxed">
-            {description}
-          </p>
-          <p className="text-lg font-bold border-b uppercase pb-2 mt-8 mb-3">
-            tech stack
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {techStack.map((item, idx) => (
-              <p
-                className="text-[13px] py-2 px-4 bg-[#1b1b1b] rounded-lg border"
-                key={idx}
+      <DrawerContent className="z-51">
+        <ScrollArea className="h-[calc(100vh-250px)] md:h-screen w-full">
+          <div className="p-4 md:p-8">
+            <div className="flex justify-end">
+              <DrawerClose
+                nativeButton={false}
+                render={
+                  <XIcon className="text-muted-foreground cursor-pointer md:mt-2 md:mr-2" />
+                }
+              />
+            </div>
+            <h1 className="text-xl md:text-4xl font-bold mt-1 md:mt-10">
+              {title}
+            </h1>
+            <div className="relative mt-8 aspect-video w-full rounded-sm overflow-hidden">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="flex gap-5 mt-4">
+              <a
+                target="_blank"
+                href={liveLink}
+                className={cn(buttonVariants(), "flex-1")}
               >
-                {item}
-              </p>
-            ))}
+                <ArrowUpRightFromSquare className="mr-1" />
+                Live Demo
+              </a>
+              <a
+                target="_blank"
+                href={gitLink}
+                className={cn(buttonVariants({ variant: "outline" }), "flex-1")}
+              >
+                <FaGithub className="mr-1" />
+                Source Code
+              </a>
+            </div>
+
+            <p className="text-lg font-bold border-b uppercase pb-2 mt-6">
+              project details
+            </p>
+            <p className="text-[16px] text-muted-foreground mt-2 leading-relaxed">
+              {description}
+            </p>
+            <p className="text-lg font-bold border-b uppercase pb-2 mt-8 mb-3">
+              tech stack
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {techStack.map((item, idx) => (
+                <p
+                  className="text-[13px] py-2 px-4 bg-[#1b1b1b] rounded-lg border"
+                  key={idx}
+                >
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollArea>
       </DrawerContent>
     </Drawer>
   );
