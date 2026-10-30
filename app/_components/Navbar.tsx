@@ -24,45 +24,65 @@ export function Navbar() {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuGroup>
-            <DropdownMenuItem>Home</DropdownMenuItem>
-            <DropdownMenuItem>Projects</DropdownMenuItem>
-            <DropdownMenuItem>Skills</DropdownMenuItem>
-            <DropdownMenuItem>Certificates</DropdownMenuItem>
-            <DropdownMenuItem>Contact</DropdownMenuItem>
+            <a href="#home">
+              <DropdownMenuItem>Home</DropdownMenuItem>
+            </a>
+            <a href="#projects">
+              <DropdownMenuItem>Projects</DropdownMenuItem>
+            </a>
+            <a href="#certificates">
+              <DropdownMenuItem>Certificates</DropdownMenuItem>
+            </a>
+            <a href="#skills">
+              <DropdownMenuItem>Skills</DropdownMenuItem>
+            </a>
+            <a href="#contact">
+              <DropdownMenuItem>Contact</DropdownMenuItem>
+            </a>
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="md:flex justify-center gap-4 hidden">
-        <UnderlineToBackground
-          targetTextColor="#000"
-          className="cursor-pointer"
-        >
-          Home
-        </UnderlineToBackground>
-        <UnderlineToBackground
-          targetTextColor="#000"
-          className="cursor-pointer"
-        >
-          Projects
-        </UnderlineToBackground>
-        <UnderlineToBackground
-          targetTextColor="#000"
-          className="cursor-pointer"
-        >
-          Certificates
-        </UnderlineToBackground>
-        <UnderlineToBackground
-          targetTextColor="#000"
-          className="cursor-pointer"
-        >
-          Skills
-        </UnderlineToBackground>
-        <UnderlineToBackground
-          targetTextColor="#000"
-          className="cursor-pointer"
-        >
-          Contact
-        </UnderlineToBackground>
+        <a href="#home">
+          <UnderlineToBackground
+            targetTextColor="#000"
+            className="cursor-pointer"
+          >
+            Home
+          </UnderlineToBackground>
+        </a>
+        <a href="#projects">
+          <UnderlineToBackground
+            targetTextColor="#000"
+            className="cursor-pointer"
+          >
+            Projects
+          </UnderlineToBackground>
+        </a>
+        <a href="#certificates">
+          <UnderlineToBackground
+            targetTextColor="#000"
+            className="cursor-pointer"
+          >
+            Certificates
+          </UnderlineToBackground>
+        </a>
+        <a href="#skills">
+          <UnderlineToBackground
+            targetTextColor="#000"
+            className="cursor-pointer"
+          >
+            Skills
+          </UnderlineToBackground>
+        </a>
+        <a href="#contact">
+          <UnderlineToBackground
+            targetTextColor="#000"
+            className="cursor-pointer"
+          >
+            Contact
+          </UnderlineToBackground>
+        </a>
       </div>
     </nav>
   );

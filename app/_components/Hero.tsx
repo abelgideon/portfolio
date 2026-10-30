@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
 } from "@/components/ui/terminal";
 import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function MyTerminal() {
   return (
@@ -70,7 +71,10 @@ function MyTerminal() {
 
 export default function HeroPage() {
   return (
-    <div className="md:flex pt-10 md:pt-67 md:max-w-[80%] md:mx-auto md:gap-40 md:h-screen">
+    <div
+      id="home"
+      className="md:flex pt-10 md:pt-67 md:max-w-[80%] md:mx-auto md:gap-40 md:h-screen"
+    >
       <div className="hidden md:block">
         <h1 className="uppercase text-7xl font-bold">Building</h1>
         <h1 className="uppercase text-7xl font-bold">Full-Stack</h1>
@@ -80,9 +84,12 @@ export default function HeroPage() {
           and Go. Focused on clean code, thoughtful user experiences, and
           turning ideas into working products.
         </p>
-        <Button className="uppercase cursor-pointer">
+        <a
+          href="#projects"
+          className={cn(buttonVariants(), "uppercase cursor-pointer")}
+        >
           view my projects <ArrowUpRight className="ml-1 size-4" />
-        </Button>
+        </a>
       </div>
       <MyTerminal />
     </div>

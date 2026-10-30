@@ -90,7 +90,10 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="mt-10 md:mt-0 md:max-w-[80%] mx-auto">
-      <h1 className="text-3xl md:text-5xl font-bold mt-15 md:mt-0 uppercase">
+      <h1
+        id="projects"
+        className="text-3xl md:text-5xl font-bold mt-15 md:mt-0 uppercase"
+      >
         Projects
       </h1>
       <p className="text-muted-foreground mt-2 mb-5 md:mb-10">
