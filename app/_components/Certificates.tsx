@@ -264,6 +264,11 @@ const certificates = [
         title: "Build a BookBot in Python",
         link: "https://www.boot.dev/certificates/1d09e3c6-47f1-4ba3-9e69-6bdeab5ae997",
       },
+      {
+        id: 21,
+        title: "Learn Pub/Sub in RabbitMQ and Go",
+        link: "https://www.boot.dev/certificates/847e28a1-8274-40a2-a9f0-3305d4f31ea2",
+      },
     ],
   },
 ];
