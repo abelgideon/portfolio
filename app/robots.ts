@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://abelgideon.vercel.app/sitemap.xml",
-    host: "https://abelgideon.vercel.app",
+    sitemap: "https://abelgideon.me/sitemap.xml",
+    host: "https://abelgideon.me",
   };
 }

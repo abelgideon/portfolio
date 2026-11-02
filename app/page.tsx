@@ -7,7 +7,7 @@ import SkillsPage from "./_components/Skills";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abelgideon.vercel.app"),
+  metadataBase: new URL("https://abelgideon.me"),
 
   title: {
     default: "Abel Gideon | Full-Stack Engineer & Web Developer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Abel Gideon",
-      url: "https://abelgideon.vercel.app",
+      url: "https://abelgideon.me",
     },
   ],
 
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Abel Gideon | Full-Stack Engineer & Web Developer",
     description:
       "Explore the portfolio of Abel Gideon, a Full-Stack Engineer building modern web applications with React, Next.js, TypeScript, Node.js, and Go.",
-    url: "https://abelgideon.vercel.app",
+    url: "https://abelgideon.me",
     siteName: "Abel Gideon Portfolio",
     images: [
       {
@@ -100,8 +100,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Abel Gideon",
-  url: "https://abelgideon.vercel.app",
-  image: "https://abelgideon.vercel.app/A.png",
+  url: "https://abelgideon.me",
+  image: "https://abelgideon.me/A.png",
   jobTitle: "Full-Stack Engineer",
   description:
     "Full-Stack Engineer specializing in React, Next.js, TypeScript, Node.js, and Go.",
