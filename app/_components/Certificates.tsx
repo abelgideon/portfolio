@@ -280,7 +280,7 @@ const certificates = [
 
 export default function CertificatesPage() {
   return (
-    <div className="mt-10 md:mt-30 md:max-w-[80%] mx-auto">
+    <section className="mt-10 md:mt-30 md:max-w-[80%] mx-auto">
       <h1
         id="certificates"
         className="text-3xl md:text-5xl font-bold mt-15 md:mt-0 uppercase"
@@ -295,7 +295,7 @@ export default function CertificatesPage() {
           <Source certificate={certificate} key={certificate.id} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -312,7 +312,7 @@ function Source({ certificate }: { certificate: CertificateSource }) {
     >
       <DrawerTrigger
         render={
-          <div className="bg-[#161616] border py-2 px-10 cursor-pointer flex justify-between items-center group md:h-35 h-25">
+          <article className="bg-[#161616] border py-2 px-10 cursor-pointer flex justify-between items-center group md:h-35 h-25">
             <div className="flex justify-center items-center gap-6">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-white p-2">
                 <Image
@@ -336,7 +336,7 @@ function Source({ certificate }: { certificate: CertificateSource }) {
                        group-hover:opacity-100 group-hover:translate-x-0
                        transition-all duration-300 ease-out"
             />
-          </div>
+          </article>
         }
         nativeButton={false}
       >
@@ -352,7 +352,7 @@ function Source({ certificate }: { certificate: CertificateSource }) {
               }
             />
           </div>
-          <div className="flex justify-center items-center gap-6 mt-1 md:mt-10 mb-6 md:mb-10">
+          <header className="flex justify-center items-center gap-6 mt-1 md:mt-10 mb-6 md:mb-10">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-white p-2">
               <Image
                 src={certificate.logo}
@@ -368,7 +368,7 @@ function Source({ certificate }: { certificate: CertificateSource }) {
                 {certificate.shortDescription}
               </p>
             </div>
-          </div>
+          </header>
           <ScrollArea className="h-[calc(100vh-250px)] w-full">
             {certificate.certificates.map((cert) => (
               <Certificate key={cert.id} title={cert.title} link={cert.link} />

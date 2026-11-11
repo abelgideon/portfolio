@@ -71,11 +71,11 @@ function MyTerminal() {
 
 export default function HeroPage() {
   return (
-    <div
+    <section
       id="home"
       className="md:flex pt-10 md:pt-67 md:max-w-[80%] md:mx-auto md:gap-40 md:h-screen"
     >
-      <div className="hidden md:block">
+      <header className="hidden md:block">
         <h1 className="uppercase text-7xl font-bold">Building</h1>
         <h1 className="uppercase text-7xl font-bold">Full-Stack</h1>
         <h1 className="uppercase text-7xl font-bold">Solutions</h1>
@@ -90,8 +90,8 @@ export default function HeroPage() {
         >
           view my projects <ArrowUpRight className="ml-1 size-4" />
         </a>
-      </div>
+      </header>
       <MyTerminal />
-    </div>
+    </section>
   );
 }

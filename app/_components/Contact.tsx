@@ -4,7 +4,7 @@ import { FaLinkedin, FaTelegram } from "react-icons/fa6";
 
 export default function ContactPage() {
   return (
-    <div className="mt-10 md:mt-30 md:max-w-[80%] mx-auto">
+    <section className="mt-10 md:mt-30 md:max-w-[80%] mx-auto">
       <h1
         id="contact"
         className="text-3xl md:text-5xl font-bold mt-15 md:mt-0 uppercase"
@@ -22,7 +22,7 @@ export default function ContactPage() {
           <h1 className="uppercase text-2xl md:text-6xl font-bold">touch.</h1>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <nav className="grid grid-cols-2 gap-3">
           <a target="_blank" href="https://github.com/abelgideon">
             <div className="w-21 h-21 md:w-30 md:h-30 border flex justify-center items-center cursor-pointer">
               <FaGithub className="size-14 md:size-16" />
@@ -43,8 +43,8 @@ export default function ContactPage() {
               <Mail className="size-14 md:size-16" />
             </div>
           </a>
-        </div>
+        </nav>
       </div>
-    </div>
+    </section>
   );
 }

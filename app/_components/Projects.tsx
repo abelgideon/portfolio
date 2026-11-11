@@ -90,7 +90,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="mt-10 md:mt-0 md:max-w-[80%] mx-auto">
+    <section className="mt-10 md:mt-0 md:max-w-[80%] mx-auto">
       <h1
         id="projects"
         className="text-3xl md:text-5xl font-bold mt-15 md:mt-0 uppercase"
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
           techStack={project.techStack}
         />
       ))}
-    </div>
+    </section>
   );
 }
 
@@ -143,14 +143,14 @@ function ProjectCard({
     >
       <DrawerTrigger
         render={
-          <div className="flex items-center h-20 md:h-30 justify-between border-b hover:bg-[#161616] md:p-5 cursor-pointer group">
+          <article className="flex items-center h-20 md:h-30 justify-between border-b hover:bg-[#161616] md:p-5 cursor-pointer group">
             <p className="text-xl md:text-3xl">{title}</p>
             <ArrowRight
               className="size-6 opacity-0 -translate-x-1.5
                          group-hover:opacity-100 group-hover:translate-x-0
                          transition-all duration-300 ease-out"
             />
-          </div>
+          </article>
         }
         nativeButton={false}
       >
@@ -171,7 +171,7 @@ function ProjectCard({
             <h1 className="text-xl md:text-4xl font-bold mt-1 md:mt-10">
               {title}
             </h1>
-            <div className="relative mt-8 aspect-video w-full rounded-sm overflow-hidden">
+            <figure className="relative mt-8 aspect-video w-full rounded-sm overflow-hidden">
               <Image
                 src={image}
                 alt={title}
@@ -179,7 +179,7 @@ function ProjectCard({
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </div>
+            </figure>
             <div className="flex gap-5 mt-4">
               <a
                 target="_blank"
